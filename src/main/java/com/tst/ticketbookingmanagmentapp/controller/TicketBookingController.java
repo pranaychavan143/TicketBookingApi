@@ -58,6 +58,7 @@ public class TicketBookingController {
   @DeleteMapping("/deleteTicket/{ticketId}")
   public  ResponseEntity<Void> ticketDeleteById(@PathVariable ("ticketId") Long ticketId){
 	  ticketBookingService.ticketDeleteById(ticketId);
+		System.out.println("Record Update");
 	  return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 	  
   }
